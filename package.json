@@ -1,11 +1,14 @@
 {
   "name": "is-throdd",
   "version": "1.0.0",
-  "description": "Returns true if input number is 'trodd'.",
+  "description": "Returns true if input number is 'throdd'.",
   "repository": {
     "type": "git",
-    "url": "github.com/davidramsay95/is-throdd"
+    "url": "git+https://github.com/davidramsay95/is-throdd.git"
   },
+  "files": [
+    "index.js"
+  ],
   "license": "MIT",
   "author": "David Ramsay",
   "type": "commonjs",
