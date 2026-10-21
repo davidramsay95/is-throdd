@@ -1,7 +1,5 @@
-
-
 'use strict';
 
-const isThrodd = (value) => (value % 3) !== 0;
+const isThrodd = (value) => value % 3 !== 0;
 
-module.exports = isThrodd
+module.exports = isThrodd;
