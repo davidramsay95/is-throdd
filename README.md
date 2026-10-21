@@ -12,8 +12,10 @@ npm install is-throdd
 
 ## Usage
 
+This package is ESM only.
+
 ```js
-const isThrodd = require('is-throdd');
+import isThrodd from 'is-throdd';
 
 isThrodd(1); // true
 isThrodd(4); // true
