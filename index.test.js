@@ -39,10 +39,24 @@ test('returns true for non-integers', () => {
   assert.equal(isThrodd(3.5), true);
 });
 
-test('returns true for NaN and Infinity', () => {
-  assert.equal(isThrodd(NaN), true);
-  assert.equal(isThrodd(Infinity), true);
-  assert.equal(isThrodd(-Infinity), true);
+test('throws a TypeError for NaN and Infinity', () => {
+  assert.throws(() => isThrodd(NaN), TypeError);
+  assert.throws(() => isThrodd(Infinity), TypeError);
+  assert.throws(() => isThrodd(-Infinity), TypeError);
+});
+
+test('throws a TypeError for values beyond the safe integer range', () => {
+  assert.throws(() => isThrodd(Number.MAX_SAFE_INTEGER + 1), TypeError);
+  assert.throws(() => isThrodd(Number.MIN_SAFE_INTEGER - 1), TypeError);
+  assert.equal(isThrodd(Number.MAX_SAFE_INTEGER), true);
+});
+
+test('throws a TypeError for non-number inputs', () => {
+  assert.throws(() => isThrodd('3'), TypeError);
+  assert.throws(() => isThrodd(null), TypeError);
+  assert.throws(() => isThrodd(undefined), TypeError);
+  assert.throws(() => isThrodd(3n), TypeError);
+  assert.throws(() => isThrodd(), TypeError);
 });
 
 test('always returns a boolean', () => {
