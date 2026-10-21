@@ -2,6 +2,22 @@
   "name": "is-throdd",
   "version": "1.0.0",
   "description": "Returns true if input number is 'throdd'.",
+  "keywords": [
+    "throdd",
+    "is-throdd",
+    "number",
+    "modulo",
+    "divisible",
+    "divisibility",
+    "three",
+    "check",
+    "predicate",
+    "utility"
+  ],
+  "homepage": "https://github.com/davidramsay95/is-throdd#readme",
+  "bugs": {
+    "url": "https://github.com/davidramsay95/is-throdd/issues"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/davidramsay95/is-throdd.git"
